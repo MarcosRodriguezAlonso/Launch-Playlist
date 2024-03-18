@@ -18,7 +18,7 @@ export const doesTitleExist = (
   // Asígnale a la variable doesExist un true o un false dependiendo de si
   // la variable title recibida ya existe en el array de títulos recibido
 
-  doesExist = title.includes(songTitle);
+  doesExist = songTitles.includes(songTitle);
 
   return doesExist;
 };
@@ -28,7 +28,7 @@ export const isTitleShort = (songTitle: string): boolean => {
   // Asígnale a la variable isShort un true o un false dependiendo de si
   // la variable title recibida tiene menos de 3 caracteres
 
-  isShort = title.length < 3;
+  isShort = songTitle.length < 3;
 
   return isShort;
 };
@@ -45,7 +45,7 @@ export const isPlaylistFull = (songTitles: string[]): boolean => {
 
 export const addSong = (songTitle: string, songTitles: string[]): void => {
   // Añade la variable title al array de títulos recibido
-  songTitles.push(title);
+  songTitles.push(songTitle);
 };
 
 export const sortSongs = (songTitles: string[]): void => {
@@ -66,7 +66,7 @@ export const removeSongByPosition = (
   position: number
 ): void => {
   // Elimina del array de títulos recibido el elemento que se encuentra en la posición recibida
-  songTitles.splice(position);
+  songTitles.splice(position, 1);
 };
 
 export const getErrorMessage = (errorCode: string): string => {
@@ -87,7 +87,7 @@ export const getErrorMessage = (errorCode: string): string => {
       break;
     default:
       errorMessage = "Error, algo no ha ido bien";
-
-      return errorMessage;
   }
+
+  return errorMessage;
 };
