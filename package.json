@@ -2,7 +2,7 @@
   "name": "launch-playlist",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/js/songTitles.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
