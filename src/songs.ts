@@ -1,13 +1,9 @@
-import { title } from "process";
-
 export const isTitleEmpty = (songTitle: string): boolean => {
   let isEmpty: boolean;
   // Asígnale a la variable isEmpty un true o un false dependiendo de si
   // la variable songTitle recibida tiene un string vacío o no
 
-  isEmpty = songTitle.length === 0;
-
-  return isEmpty;
+  return songTitle.length === 0;
 };
 
 export const doesTitleExist = (
@@ -18,9 +14,7 @@ export const doesTitleExist = (
   // Asígnale a la variable doesExist un true o un false dependiendo de si
   // la variable title recibida ya existe en el array de títulos recibido
 
-  doesExist = songTitles.includes(songTitle);
-
-  return doesExist;
+  return songTitles.includes(songTitle);
 };
 
 export const isTitleShort = (songTitle: string): boolean => {
@@ -28,9 +22,7 @@ export const isTitleShort = (songTitle: string): boolean => {
   // Asígnale a la variable isShort un true o un false dependiendo de si
   // la variable title recibida tiene menos de 3 caracteres
 
-  isShort = songTitle.length < 3;
-
-  return isShort;
+  return songTitle.length < 3;
 };
 
 export const isPlaylistFull = (songTitles: string[]): boolean => {
@@ -38,9 +30,7 @@ export const isPlaylistFull = (songTitles: string[]): boolean => {
   // Asígnale a la variable isFull un true o un false dependiendo de si
   // el array de títulos recibido tiene 5 o más elementos
 
-  isFull = songTitles.length >= 5;
-
-  return isFull;
+  return songTitles.length >= 5;
 };
 
 export const addSong = (songTitle: string, songTitles: string[]): void => {
